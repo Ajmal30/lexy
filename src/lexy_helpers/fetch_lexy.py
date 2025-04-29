@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+from rich.progress import track
 import json
 import re
 import datetime
@@ -26,7 +27,10 @@ class LexyScraper:
         self.log_path.mkdir(exist_ok=True)
         self.file_path.mkdir(exist_ok=True)
         self.json_path.mkdir(exist_ok=True)
-        for language in self.languages:
+        for language in track(
+            self.languages,
+            description="Fetching languages from 'Learn X in Y minutes'...",
+        ):
             language_name = language.text.strip()
             if not language.get("href") or language_name == "AWK":
                 language_url = None
@@ -53,6 +57,7 @@ class LexyScraper:
                         language_file_full_url, file_extension, language_name
                     )
                     self.save_to_json()
+                    self.create_log()
                 if not self.force and language_name not in [
                     lang["language"] for lang in self.languages_list
                 ]:
@@ -61,6 +66,7 @@ class LexyScraper:
                         language_file_full_url, file_extension, language_name
                     )
                     self.save_to_json()
+                    self.create_log()
             except (IndexError, AttributeError):
                 file_extension = ".txt"
 
@@ -86,8 +92,7 @@ class LexyScraper:
                     self.fetch_language()
         except FileNotFoundError:
             self.fetch_language()
-            with open(f"{self.log_path}/last_update.txt", "w") as file:
-                file.write(str(today))
+            self.create_log()
 
     def force_update(self):
         self.force = True
@@ -95,6 +100,11 @@ class LexyScraper:
         with open(f"{self.log_path}/last_update.txt", "w") as file:
             file.write(str(datetime.date.today()))
         self.force = False
+
+    def create_log(self):
+        today = datetime.date.today()
+        with open(f"{self.log_path}/last_update.txt", "w") as file:
+            file.write(str(today))
 
 
 if __name__ == "__main__":

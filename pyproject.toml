@@ -10,7 +10,12 @@ version = "0.1.0"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.13"
-dependencies = ["beautifulsoup4>=4.13.4", "click>=8.1.8", "requests>=2.32.3"]
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+ "click>=8.1.8",
+ "requests>=2.32.3",
+ "typer>=0.15.3",
+]
 
 [project.urls]
 Repository = "https://github.com/antoniorodr/lexy"
