@@ -1,7 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "xny"
+name = "lexy"
+authors = [{ name = "Antonio Rodriguez", email = "antonioinorge@hotmail.com" }]
+description = "Lexy is a lightweight CLI tool that fetches programming tutorials from 'Learn X in Y Minutes' directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow."
 version = "0.1.0"
-description = "Add your description here"
 readme = "README.md"
+license = "MIT"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = ["beautifulsoup4>=4.13.4", "click>=8.1.8", "requests>=2.32.3"]
+
+[project.urls]
+Repository = "https://github.com/antoniorodr/lexy"
+Issues = "https://github.com/antoniorodr/lexy/issues"
+
+[project.scripts]
+lexy = "lexy.lexy:lexy"
+
+[tool.setuptools]
+package-dir = { "" = "src" }

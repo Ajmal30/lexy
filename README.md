@@ -1,33 +1,33 @@
 <div align="center" id="top">
-  <img height=200px src="./.github/xny.png" alt="xny" />
+  <img height=200px src="./.github/lexy.png" alt="lexy" />
 
 &#xa0;
 
-  <!-- <a href="https://xny.netlify.app">Demo</a> -->
+  <!-- <a href="https://lexy.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">xny</h1>
+<h1 align="center">lexy</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/antoniorodr/xny?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/antoniorodr/lexy?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/antoniorodr/xny?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/antoniorodr/lexy?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/antoniorodr/xny?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/antoniorodr/lexy?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/antoniorodr/xny?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/antoniorodr/lexy?color=56BEB8">
 
-  <img alt="Github issues" src="https://img.shields.io/github/issues/antoniorodr/xny?color=56BEB8" />
+  <img alt="Github issues" src="https://img.shields.io/github/issues/antoniorodr/lexy?color=56BEB8" />
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/antoniorodr/xny?color=56BEB8" />
+  <img alt="Github forks" src="https://img.shields.io/github/forks/antoniorodr/lexy?color=56BEB8" />
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/antoniorodr/xny?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/antoniorodr/lexy?color=56BEB8" />
 </p>
 
 <!-- Status -->
 
 <!-- <h4 align="center">
-	🚧  xny 🚀 Under construction...  🚧
+	🚧  lexy 🚀 Under construction...  🚧
 </h4>
 
 <hr> -->
@@ -46,9 +46,9 @@
 
 ## :dart: About
 
-# xny
+# lexy
 
-**xny** is a lightweight CLI tool that fetches programming tutorials from [Learn X in Y Minutes](https://learnxinyminutes.com) directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow.
+**lexy** is a lightweight CLI tool that fetches programming tutorials from [Learn X in Y Minutes](https://learnxinyminutes.com) directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow.
 
 This project would not be possible without the amazing work of the [Learn X in Y Minutes](https://github.com/adambard/learnxinyminutes-docs) community. A huge thanks to all contributors for making high-quality learning resources freely available!
 
@@ -76,10 +76,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/antoniorodr/xny
+$ git clone https://github.com/antoniorodr/lexy
 
 # Access
-$ cd xny
+$ cd lexy
 
 # Install dependencies
 $ yarn
