@@ -2,32 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.1.1] - 07.04.2025
-
-### Added
-
-- Confirmation prompt when editing or moving notes that contain images or attachments.
-- Memo will notify you if the folder you are trying to filter does not exist when using `memo notes --folder <foldername>`.
-- Basic test coverage.
-
-### Changed
-
-- Refactored codebase and applied minor output improvements
-
-## [0.1.0] - 06.04.2025
+## [0.1.0] - 29.04.2025
 
 Initial Release.
 
 ### Added
 
-Initial release with core Apple Notes functionality:
+Initial release with the following features:
 
-- Create new notes in Apple Notes
-- Edit existing notes
-- Delete notes
-- View a list of all notes
-- Move notes between folders
-- List all folders and subfolders
+- Check documentation from "Learn X in Y minutes" directly from the terminal
+- Syntax highlighting using [bat](https://github.com/sharkdp/bat)
+- Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
+- Auto-update every 60 days
 
-[0.1.1]: /v0.1.1
-[0.1.0]: /v0.1.0
+[0.1.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.1.0
