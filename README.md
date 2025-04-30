@@ -93,6 +93,12 @@ brew tap antoniorodr/lexy
 brew install antoniorodr/lexy/lexy
 ```
 
+#### Installation using [uv](https://docs.astral.sh/uv/)
+
+```bash
+uv tool run git+https://github.com/antoniorodr/lexy --help
+```
+
 ## :bookmark_tabs: Documentation
 
 First, make sure you have [bat](https://github.com/sharkdp/bat) installed. Lexy requires it for syntax highlighting.
