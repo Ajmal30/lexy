@@ -93,6 +93,12 @@ brew tap antoniorodr/lexy
 brew install antoniorodr/lexy/lexy
 ```
 
+#### AUR Installation
+
+```bash
+yay -S lexy
+```
+
 #### Installation using [uv](https://docs.astral.sh/uv/)
 
 ```bash
