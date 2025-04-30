@@ -16,8 +16,8 @@ All participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
 1. Fork the project and clone your fork:
 
    ```bash
-   git clone https://github.com/antoniorodr/memo
-   cd memo
+   git clone https://github.com/antoniorodr/lexy
+   cd lexy
    ```
 
 2. Create a feature branch:
@@ -34,10 +34,10 @@ All participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
    uv sync
    ```
 
-4. (Optional) Uninstall Homebrew version of Memo:
+4. (Optional) Uninstall Homebrew version of Lexy:
 
    ```bash
-   brew uninstall memo
+   brew uninstall lexy
    ```
 
 5. Install the CLI locally in editable mode:
@@ -49,13 +49,13 @@ All participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
 6. Run the tool:
 
    ```bash
-   memo --help
+   lexy --help
    ```
 
 7. (Optional) Uninstall local version when you are done:
 
    ```bash
-   uv tool uninstall memo
+   uv tool uninstall lexy
    ```
 
 ## Commit Style
