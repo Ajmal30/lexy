@@ -17,6 +17,8 @@ def lexy(language):
     - Use "list" to view all available languages.
 
     - Use "update" to force update Lexy.
+
+    - Use "modified" to view the last modified date of Lexy.
     """
     LexyInit(lexy_scraper).ensure_languages_file()
     lexy_scraper.auto_update()
@@ -28,5 +30,8 @@ def lexy(language):
             click.echo_via_pager(lexy_finder._generate_output())
         elif language == "update":
             lexy_scraper.force_update()
+        elif language == "modified":
+            last_modified = lexy_scraper.last_modified()
+            click.echo(f"The last time Lexy was updated is: {last_modified}")
         else:
             lexy_finder.language_finder()

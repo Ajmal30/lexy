@@ -120,6 +120,8 @@ Usage: lexy [OPTIONS] <LANGUAGE>
 
   - Use "update" to force update Lexy.
 
+  - Use "modified" to view the last modified date of Lexy.
+
 Options:
   --version  Show the version and exit.
   --help     Show this message and exit.

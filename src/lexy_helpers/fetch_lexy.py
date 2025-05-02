@@ -6,6 +6,8 @@ import re
 import datetime
 from pathlib import Path
 
+UPDATE_INTERVAL_DAYS = 60
+
 
 class LexyScraper:
     def __init__(self):
@@ -88,7 +90,7 @@ class LexyScraper:
                 days_since_last_update = (
                     today - datetime.datetime.strptime(last_update, "%Y-%m-%d").date()
                 ).days
-                if days_since_last_update >= 60:
+                if days_since_last_update >= UPDATE_INTERVAL_DAYS:
                     self.fetch_language()
         except FileNotFoundError:
             self.fetch_language()
@@ -105,6 +107,16 @@ class LexyScraper:
         today = datetime.date.today()
         with open(f"{self.log_path}/last_update.txt", "w") as file:
             file.write(str(today))
+
+    def last_modified(self):
+        try:
+            with open(f"{self.log_path}/last_update.txt", "r") as file:
+                last_update = file.read()
+                last_update = datetime.datetime.strptime(last_update, "%Y-%m-%d").date()
+                last_update = last_update.strftime("%d.%m.%Y")
+                return last_update
+        except FileNotFoundError:
+            return None
 
 
 if __name__ == "__main__":

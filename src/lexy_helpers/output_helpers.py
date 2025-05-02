@@ -16,6 +16,11 @@ class LexyFinder:
 
     def language_finder(self):
         file_path = self.lexy.file_path
+        if not any(
+            self.language.lower() == d["language"].lower() for d in self.languages
+        ):
+            click.secho(f"Language {self.language} not found", fg="red")
+            return exit(1)
         for lang in self.languages:
             language_name = lang["language"].lower()
             language_file = lang["language"] + lang["file_extension"]
@@ -23,8 +28,6 @@ class LexyFinder:
                 with open(f"{file_path}/{language_file}", "r") as file:
                     full_path = os.path.abspath(file.name)
                     subprocess.run(["bat", full_path])
-            if not self.language:
-                click.secho(f"Language not found: {self.language}", fg="red")
 
 
 class LexyInit:
