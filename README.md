@@ -44,7 +44,7 @@
 
 **Lexy** is a lightweight CLI tool that fetches programming tutorials from [Learn X in Y Minutes](https://learnxinyminutes.com) directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow.
 
-Lexy saves a local copy of the documentation, so you can access it even when you're offline. It also provides syntax highlighting using [bat](https://github.com/sharkdp/bat).
+Lexy saves a local copy of the documentation, so you can access it even when you're offline. It also provides syntax highlighting using [bat](https://github.com/sharkdp/bat) and fuzzy search using [fzf](https://github.com/junegunn/fzf).
 
 This project would not be possible without the amazing work of the [Learn X in Y Minutes](https://github.com/adambard/learnxinyminutes-docs) community. A huge thanks to all contributors for making high-quality learning resources freely available!
 
@@ -57,7 +57,8 @@ This project would not be possible without the amazing work of the [Learn X in Y
 :heavy_check_mark: Check documentation from "Learn X in Y minutes" directly from the terminal\
 :heavy_check_mark: Syntax highlighting using [bat](https://github.com/sharkdp/bat)\
 :heavy_check_mark: Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server\
-:heavy_check_mark: Auto-update every 60 days
+:heavy_check_mark: Auto-update every 60 days\
+:heavy_check_mark: Searching powered by [fzf](https://github.com/junegunn/fzf)
 
 ## :rocket: Technologies
 
@@ -66,10 +67,12 @@ The following tools were used in this project:
 - [Click](https://click.palletsprojects.com/en/stable/)
 - [Typer](https://typer.tiangolo.com)
 - [Beautifulsoup](https://pypi.org/project/beautifulsoup4/)
+- [fzf](https://github.com/junegunn/fzf)
+- [bat](https://github.com/sharkdp/bat)
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [bat](https://github.com/sharkdp/bat) installed.
+Before starting :checkered_flag:, you need to have [bat](https://github.com/sharkdp/bat) and [fzf](https://github.com/junegunn/fzf) installed.
 
 ## :checkered_flag: Installation
 
@@ -104,7 +107,7 @@ uv tool run git+https://github.com/antoniorodr/lexy --help
 
 ## :bookmark_tabs: Documentation
 
-First, make sure you have [bat](https://github.com/sharkdp/bat) installed. Lexy requires it for syntax highlighting.
+First, make sure you have [bat](https://github.com/sharkdp/bat) and [fzf](https://github.com/junegunn/fzf) installed. Lexy requires it for syntax highlighting and searching.
 
 You can use the command `lexy --help` to see all available options.
 
@@ -128,6 +131,8 @@ Options:
 ```
 
 Lexy keeps a local copy of the documentation in `$HOME/.config/lexy`, which is created automatically the first time you run Lexy, and it will be updated every 60 days. You can force an update using "update" as `<LANGUAGE>`.
+
+You can find the full documentation [here](https://antoniorodr.github.io/lexy/).
 
 ## :memo: License
 

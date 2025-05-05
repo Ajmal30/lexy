@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "lexy"
 authors = [{ name = "Antonio Rodriguez", email = "antonioinorge@hotmail.com" }]
 description = "Lexy is a lightweight CLI tool that fetches programming tutorials from 'Learn X in Y Minutes' directly into your terminal. Quickly search, learn, and reference code examples without leaving your workflow."
-version = "0.2.0"
+version = "0.3.0"
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.13"
@@ -16,6 +16,9 @@ dependencies = [
   "requests>=2.32.3",
   "typer>=0.15.3",
 ]
+
+[project.optional-dependencies]
+docs = ["mkdocs>=1.5.3", "mkdocs-material>=9.5.18", "mkdocs-awesome-nav>=3.1.1"]
 
 [project.urls]
 Repository = "https://github.com/antoniorodr/lexy"

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.0] - 05.05.2025
+
+### Added
+
+- Added support to fuzzy search when using the 'list' argument.
+- Created documentation using Material for MkDocs.You can find it [here](https://antoniorodr.github.io/lexy/).
+
+### Changed
+
+- Updated the README file to include information about the new fuzzy search feature.
+
 ## [0.2.0] - 02.05.2025
 
 ### Added
@@ -32,5 +43,6 @@ Initial release with the following features:
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
 - Auto-update every 60 days
 
+[0.3.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.0
 [0.2.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.2.0
 [0.1.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.1.0
