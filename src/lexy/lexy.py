@@ -27,7 +27,7 @@ def lexy(language):
         languages = json.load(f)
         lexy_finder = LexyFinder(language, languages, lexy_scraper)
         if language == "list":
-            click.echo_via_pager(lexy_finder._generate_output())
+            lexy_finder._get_language()
         elif language == "update":
             lexy_scraper.force_update()
         elif language == "modified":
