@@ -102,7 +102,7 @@ yay -S lexy
 #### Installation using [uv](https://docs.astral.sh/uv/)
 
 ```bash
-uv tool run git+https://github.com/antoniorodr/lexy --help
+uv tool install git+https://github.com/antoniorodr/lexy
 ```
 
 ## :bookmark_tabs: Documentation
