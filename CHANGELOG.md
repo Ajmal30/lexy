@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.2] - 21.05.2025
+
+### Changed
+
+- Refactored the lexy command to use match case instead of if statements for better readability.
+
+### Fixed
+
+- Resolved the issue where lexy needed Hatchling to be built, when Lexy is not using it at the moment.
+
 ## [0.3.1] - 07.05.2025
 
 ### Changed
@@ -50,6 +60,7 @@ Initial release with the following features:
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
 - Auto-update every 60 days
 
+[0.3.2]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.2
 [0.3.1]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.1
 [0.3.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.0
 [0.2.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.2.0

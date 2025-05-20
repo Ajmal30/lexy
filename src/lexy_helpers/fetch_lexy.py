@@ -7,7 +7,6 @@ import datetime
 from pathlib import Path
 
 
-
 class LexyScraper:
     def __init__(self):
         self.homedir = Path.home()

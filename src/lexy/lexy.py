@@ -26,12 +26,13 @@ def lexy(language):
     with open(f"{lexy_scraper.json_path}/languages.json", "r") as f:
         languages = json.load(f)
         lexy_finder = LexyFinder(language, languages, lexy_scraper)
-        if language == "list":
-            lexy_finder._get_language()
-        elif language == "update":
-            lexy_scraper.force_update()
-        elif language == "modified":
-            last_modified = lexy_scraper.last_modified()
-            click.echo(f"The last time Lexy was updated is: {last_modified}")
-        else:
-            lexy_finder.language_finder()
+        match language:
+            case "list":
+                lexy_finder._get_language()
+            case "update":
+                lexy_scraper.force_update()
+            case "modified":
+                last_modified = lexy_scraper.last_modified()
+                click.echo(f"The most recent update to Lexy was on: {last_modified}")
+            case _:
+                lexy_finder.language_finder()

@@ -19,4 +19,4 @@ def test_lexy_with_modified():
     runner = CliRunner()
     result = runner.invoke(lexy, ["modified"])
     assert result.exit_code == 0
-    assert "The last time Lexy was updated is:" in result.output
+    assert "The most recent update to Lexy was on:" in result.output
