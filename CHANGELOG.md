@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.4.1 - 29.05.2025
+
+### Fixed
+
+- Fixed a bug where Lexy was not able to create the path on windows.
+
 ## 0.4.0 - 26.05.2025
 
 ### Changed
