@@ -58,6 +58,26 @@ All participation is governed by our [Code of Conduct](CODE_OF_CONDUCT.md).
    uv tool uninstall lexy
    ```
 
+## Testing
+
+This project uses [pytest](https://docs.pytest.org/en/stable/) for testing. To run the tests:
+
+```bash
+pytest
+```
+
+To install this tool, run:
+
+```bash
+uv pip install pytest
+```
+
+or
+
+```bash
+pip install pytest
+```
+
 ## Commit Style
 
 Follow [Conventional Commits](https://www.conventionalcommits.org/) if possible:
