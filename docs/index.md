@@ -23,4 +23,4 @@ This project would not be possible without the amazing work of the [Learn X in Y
 
 To learn more about Lexy, check out the following resources:
 
-- Usage documentation: [Usage Documentation](./usage.md)
+- Usage documentation: [Usage Documentation](usage.md)
