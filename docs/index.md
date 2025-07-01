@@ -18,3 +18,9 @@ This project would not be possible without the amazing work of the [Learn X in Y
 - Syntax highlighting using [bat](https://github.com/sharkdp/bat).
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server.
 - Auto-update every 60 days.
+
+## Learn More
+
+To learn more about Lexy, check out the following resources:
+
+- Usage documentation: [Usage Documentation](usage.md)
