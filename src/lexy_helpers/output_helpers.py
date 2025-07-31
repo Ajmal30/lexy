@@ -16,7 +16,6 @@ class LexyFinder:
     def language_finder(self, language: str):
         language = language.lower()
         file_path = self.scraper.file_path
-
         found_language = self._get_from_available_languages(language)
 
         if not found_language:
