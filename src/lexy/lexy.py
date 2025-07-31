@@ -25,14 +25,14 @@ def lexy(language):
     language = language.lower()
     with open(f"{lexy_scraper.json_path}/languages.json", "r") as f:
         languages = json.load(f)
-        lexy_finder = LexyFinder(language, languages, lexy_scraper)
+        lexy_finder = LexyFinder(languages, lexy_scraper)
         match language:
             case "list":
-                lexy_finder._get_language()
+                lexy_finder.get_language()
             case "update":
                 lexy_scraper.force_update()
             case "modified":
                 last_modified = lexy_scraper.last_modified()
                 click.echo(f"The most recent update to Lexy was on: {last_modified}")
             case _:
-                lexy_finder.language_finder()
+                lexy_finder.language_finder(language)

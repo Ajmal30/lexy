@@ -7,32 +7,40 @@ from pathlib import Path
 
 
 class LexyFinder:
-    def __init__(self, language: str, languages: list, lexy: LexyScraper):
-        self.language = language
-        self.languages = languages
-        self.lexy = lexy
+    def __init__(self, languages: list, lexy: LexyScraper):
+        self.available_languages = languages
+        self.scraper = lexy
         self.homedir = Path.home()
         self.directory = self.homedir / ".config/lexy/files"
 
-    def language_finder(self):
-        file_path = self.lexy.file_path
-        if not any(
-            self.language.lower() == d["language"].lower() for d in self.languages
-        ):
-            click.secho(f"Language {self.language} not found", fg="red")
-            return exit(1)
-        for lang in self.languages:
-            language_name = lang["language"].lower()
-            language_file = lang["language"] + lang["file_extension"]
-            if language_name == self.language:
-                with open(f"{file_path}/{language_file}", "r") as file:
-                    full_path = os.path.abspath(file.name)
-                    subprocess.run(["bat", full_path])
+    def language_finder(self, language: str):
+        language = language.lower()
+        file_path = self.scraper.file_path
 
-    def _get_language(self):
+        found_language = self._get_from_available_languages(language)
+
+        if not found_language:
+            click.secho(f"Language {language} not found", fg="red")
+            return exit(1)
+
+        with open(
+            f"{file_path}/{found_language["language"]}{found_language["file_extension"]}",
+            "r",
+        ) as file:
+            full_path = os.path.abspath(file.name)
+            subprocess.run(["bat", full_path])
+
+    def get_language(self):
         config = load_config()
         fzf_command = build_fzf_command(config)
         subprocess.run(fzf_command, shell=True, cwd=self.directory)
+
+    def _get_from_available_languages(self, requested_lang):
+        for lang in self.available_languages:
+            if requested_lang == lang["language"].lower():
+                return lang
+
+        return None
 
 
 class LexyInit:
