@@ -75,6 +75,7 @@ The following tools were used in this project:
 Before starting :checkered_flag:, you need to have [bat](https://github.com/sharkdp/bat) and [fzf](https://github.com/junegunn/fzf) installed.
 
 ### Important for Linux users
+
 When installing [bat](https://github.com/sharkdp/bat) via `apt`, the executable may be installed as `batcat` instead of `bat`. In this case, you should follow these [steps](https://github.com/sharkdp/bat?tab=readme-ov-file#on-ubuntu-using-apt) to create the necessary symlink to make `lexy` work properly. **Note**: creating an alias will not work, as aliases are not visible to subprocesses started by Python.
 
 ## :checkered_flag: Installation
@@ -137,6 +138,61 @@ Lexy keeps a local copy of the documentation in `$HOME/.config/lexy`, which is c
 
 You can find the full documentation [here](https://antoniorodr.github.io/lexy/).
 
+#### 🎨 Theming in Lexy (from v0.4.2)
+
+Starting from **Lexy v0.4.2**, you can customize the appearance of the `fzf` interface used in the `lexy list` command.
+
+By default, Lexy applies a color palette inspired by **Catppuccin Mocha**, but you can override it by creating a `config.toml` file in your Lexy config directory:
+
+If you want to modify syntax highlighting for file previews powered by `bat`, refer to the [bat documentation](https://github.com/sharkdp/bat).
+
+---
+
+##### 🛠 Default Configuration
+
+```toml
+[fzf]
+preview_percent = "60"
+input_label = " Input "
+border_label = " Enter: Open with bat │ Ctrl-D/U: scroll preview "
+
+[colors]
+border = "#aaaaaa"
+label = "#cccccc"
+preview_border = "#9999cc"
+preview_label = "#ccccff"
+list_border = "#669966"
+list_label = "#99cc99"
+input_border = "#996666"
+input_label = "#ffcccc"
+header_border = "#6699cc"
+```
+
+- `preview_percent` changes the size of the file preview window
+- `input_label` changes the text of the input label
+- `border_label` changes the text of the top of the window
+
+![Lexy, with redimensioned preview window](./src/pictures/lexy_layout_changed.png)
+
+![Lexy, with another theme](./src/pictures/lexy_colors_changed.png)
+
+Below is the configuration used in the second screenshot:
+
+```toml
+[colors]
+border = "#ff0000"         # Red
+label = "#00ff00"          # Green
+preview_border = "#0000ff" # Blue
+preview_label = "#ffff00"  # Yellow
+list_border = "#ff00ff"    # Magenta
+list_label = "#00ffff"     # Cyan
+input_border = "#ffa500"   # Orange
+input_label = "#800080"    # Lila
+header_border = "#008000"  # Dark green
+```
+
+You can include only the parameters you'd like to override, Lexy will fall back to defaults for the rest.
+
 ## :memo: License
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
@@ -150,3 +206,7 @@ Made with :heart: by <a href="https://github.com/antoniorodr" target="_blank">An
 &#xa0;
 
 <a href="#top">Back to top</a>
+
+```
+
+```

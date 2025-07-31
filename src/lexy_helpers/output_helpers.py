@@ -2,6 +2,7 @@ import subprocess
 import os
 import click
 from lexy_helpers.fetch_lexy import LexyScraper
+from lexy_helpers.config import load_config, build_fzf_command
 from pathlib import Path
 
 
@@ -29,31 +30,8 @@ class LexyFinder:
                     subprocess.run(["bat", full_path])
 
     def _get_language(self):
-        fzf_command = r"""
-        fzf --style=full \
-        --border --padding=1,2 \
-        --info=inline \
-        --border-label=' Enter: Open with bat │ Ctrl-D/U: scroll preview ' \
-        --input-label=' Input ' \
-        --preview='bat --style=plain --color=always {}' \
-        --preview-window=right:60%:wrap:cycle \
-        --bind='ctrl-d:preview-down' \
-        --bind='ctrl-u:preview-up' \
-        --bind='enter:execute(bat {})' \
-        --bind='result:transform-list-label:
-            if [[ -z $FZF_QUERY ]]; then
-            echo " $FZF_MATCH_COUNT items "
-            else
-            echo " $FZF_MATCH_COUNT matches for [$FZF_QUERY] "
-            fi' \
-        --bind='focus:transform-preview-label:[[ -n {} ]] && printf " Previewing [%s] " {}' \
-        --bind='focus:+transform-header:file --brief {} || echo "No file selected"' \
-        --color='border:#aaaaaa,label:#cccccc' \
-        --color='preview-border:#9999cc,preview-label:#ccccff' \
-        --color='list-border:#669966,list-label:#99cc99' \
-        --color='input-border:#996666,input-label:#ffcccc' \
-        --color='header-border:#6699cc'
-        """
+        config = load_config()
+        fzf_command = build_fzf_command(config)
         subprocess.run(fzf_command, shell=True, cwd=self.directory)
 
 

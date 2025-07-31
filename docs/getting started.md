@@ -1,5 +1,9 @@
 First, make sure you have [bat](https://github.com/sharkdp/bat) and [fzf](https://github.com/junegunn/fzf) installed. Lexy requires it for syntax highlighting and searching.
 
+### Important for Linux users
+
+When installing [bat](https://github.com/sharkdp/bat) via `apt`, the executable may be installed as `batcat` instead of `bat`. In this case, you should follow these [steps](https://github.com/sharkdp/bat?tab=readme-ov-file#on-ubuntu-using-apt) to create the necessary symlink to make `lexy` work properly. **Note**: creating an alias will not work, as aliases are not visible to subprocesses started by Python.
+
 You can use the command `lexy --help` to see all available options.
 
 ```bash

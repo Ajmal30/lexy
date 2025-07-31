@@ -2,13 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## 0.4.1 - 29.05.2025
+## [0.4.2] - 31.07.2025
+
+### Added
+
+- Possibility to customize the theme of the fzf window.
+
+### Changed
+
+- Created documentation for the theming
+
+## [0.4.1] - 29.05.2025
 
 ### Fixed
 
 - Fixed a bug where Lexy was not able to create the path on windows.
 
-## 0.4.0 - 26.05.2025
+## [0.4.0] - 26.05.2025
 
 ### Changed
 
@@ -73,6 +83,9 @@ Initial release with the following features:
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
 - Auto-update every 60 days
 
+[0.4.2]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.2
+[0.4.1]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.1
+[0.4.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.0
 [0.3.2]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.2
 [0.3.1]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.1
 [0.3.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.3.0

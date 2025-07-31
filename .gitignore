@@ -1,3 +1,4 @@
 uv.lock
 lexy.egg-info/
 __pycache__/
+dist/
