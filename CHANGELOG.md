@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.3] - 01.08.2025
+
+### Changed
+
+- Refactored `LexyFinder` to simplify logic:
+  - Removed multiple iterations through languages.
+  - Renamed some parameters for improved readability.
+
+Thanks @AndreBonda for the refactoring!
+
 ## [0.4.2] - 31.07.2025
 
 ### Added
