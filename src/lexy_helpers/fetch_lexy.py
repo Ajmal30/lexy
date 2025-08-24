@@ -24,16 +24,35 @@ class LexyScraper:
         self.json_path = self.lexy_dir / "json"
         self.XNY_URL = "https://learnxinyminutes.com"
         self.session = requests.Session()
-        self.response = self.session.get(self.XNY_URL)
-        self.soup = BeautifulSoup(self.response.text, "html.parser")
-        self.languages = self.soup.select("tr td.name a")
+        self.soup = None
+        self.languages = []
         self.pattern = r"\.[\w]+"
         self.force = False
         self.languages_list = []
         self.update_interval_days = 60
+        self._create_mapping()
+
+    def _load_languages_from_json(self):
+        try:
+            with open(self.json_path / "languages.json", "r", encoding="utf-8") as f:
+                self.languages_list = json.load(f)
+            return True
+        except FileNotFoundError:
+            return False
 
     def fetch_language(self):
-        self._create_mapping()
+        if self._load_languages_from_json() and not self.force:
+            return
+        try:
+            response = self.session.get(self.XNY_URL, timeout=5)
+            response.raise_for_status()
+        except requests.RequestException:
+            raise RuntimeError(
+                "No internet connection and no cached languages.json found."
+            )
+
+        self.soup = BeautifulSoup(response.text, "html.parser")
+        self.languages = self.soup.select("tr td.name a")
 
         def process_language(language):
             language_name = language.text.strip()

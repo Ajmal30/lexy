@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.4] - 24.08.2025
+
+### Fixed
+
+- Fixed a bug where Lexy was not able to open the files cashed when offline.
+
 ## [0.4.3] - 01.08.2025
 
 ### Changed
@@ -93,6 +99,8 @@ Initial release with the following features:
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
 - Auto-update every 60 days
 
+[0.4.4]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.4
+[0.4.3]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.3
 [0.4.2]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.2
 [0.4.1]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.1
 [0.4.0]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.0
