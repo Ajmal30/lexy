@@ -13,6 +13,7 @@ import re
 import datetime
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import click
 
 
 class LexyScraper:
@@ -47,8 +48,8 @@ class LexyScraper:
             response = self.session.get(self.XNY_URL, timeout=5)
             response.raise_for_status()
         except requests.RequestException:
-            raise RuntimeError(
-                "No internet connection and no cached languages.json found."
+            return click.secho(
+                "No internet connection and no cached languages found.", fg="red"
             )
 
         self.soup = BeautifulSoup(response.text, "html.parser")

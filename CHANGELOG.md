@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.4.5] - 25.08.2025
+
+### Changed
+
+- Improved the error message shown by `lexy update` when no internet connection is available, making it clearer for users.
+
 ## [0.4.4] - 24.08.2025
 
 ### Fixed
@@ -99,6 +105,7 @@ Initial release with the following features:
 - Local copy to speed up the process and avoid too many requests to the "Learn X in Y minutes" server
 - Auto-update every 60 days
 
+[0.4.5]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.5
 [0.4.4]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.4
 [0.4.3]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.3
 [0.4.2]: https://github.com/antoniorodr/lexy/releases/tag/v0.4.2
