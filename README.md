@@ -172,9 +172,9 @@ header_border = "#6699cc"
 - `input_label` changes the text of the input label
 - `border_label` changes the text of the top of the window
 
-![Lexy, with redimensioned preview window](./src/pictures/lexy_layout_changed.png)
+![Lexy, with redimensioned preview window](docs/lexy_layout_changed.png)
 
-![Lexy, with another theme](./src/pictures/lexy_colors_changed.png)
+![Lexy, with another theme](docs/lexy_colors_changed.png)
 
 Below is the configuration used in the second screenshot:
 

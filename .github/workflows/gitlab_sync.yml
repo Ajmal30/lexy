@@ -6,6 +6,12 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Pull latest changes from origin/main
+        run: git pull --rebase origin main
+
       - name: Sync to GitLab
         uses: keninkujovic/gitlab-sync@2.1.0
         with:
