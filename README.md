@@ -206,7 +206,3 @@ Made with :heart: by <a href="https://github.com/antoniorodr" target="_blank">An
 &#xa0;
 
 <a href="#top">Back to top</a>
-
-```
-
-```
