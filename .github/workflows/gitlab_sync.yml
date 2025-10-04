@@ -9,6 +9,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Checkout main
+        run: git checkout main
+
       - name: Pull latest changes from origin/main
         run: git pull --rebase origin main
 
