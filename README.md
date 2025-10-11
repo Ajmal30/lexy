@@ -50,7 +50,12 @@ This project would not be possible without the amazing work of the [Learn X in Y
 
 ## :computer: Demo
 
-[![asciicast](https://asciinema.org/a/717362.svg)](https://asciinema.org/a/717362)
+<div align="center" id="top">
+  <img src="./.github/lexy.gif" alt="lexy" />
+
+&#xa0;
+
+</div>
 
 ## :sparkles: Features
 
