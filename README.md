@@ -204,9 +204,9 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 ## :eyes: Do you like my work?
 
-<a href="https://www.buymeacoffee.com/antoniorodr" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-white.png" alt="Buy Me A Coffee" height="48"></a>
+If you like my work and want to support me, you can buy me a coffee ☕ or even a burrito 🌯 by sponsoring me.
 
-Made with :heart: by <a href="https://github.com/antoniorodr" target="_blank">Antonio Rodriguez</a>
+<iframe src="https://github.com/sponsors/antoniorodr/button" title="Sponsor antoniorodr" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
 
 &#xa0;
 
