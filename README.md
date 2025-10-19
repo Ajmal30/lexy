@@ -206,7 +206,7 @@ This project is under license from MIT. For more details, see the [LICENSE](LICE
 
 If you like my work and want to support me, you can buy me a coffee ☕ or even a burrito 🌯 by sponsoring me.
 
-<iframe src="https://github.com/sponsors/antoniorodr/button" title="Sponsor antoniorodr" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>
+[![GitHub Sponsor](https://img.shields.io/badge/Sponsor_on_GitHub-30363D?logo=github&style=for-the-badge)](https://github.com/sponsors/antoniorodr)
 
 &#xa0;
 
